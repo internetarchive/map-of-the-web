@@ -35,7 +35,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/semantic.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/semantic.min.css">
 	{{ script1 | safe }}
-	{{ script2 | safe}}
 </head>
 
 
@@ -54,6 +53,9 @@
 				<h3> The total number of webpages of {{results}} is {{total_number}} </h3>
 				<br />
 			{% endif %}
+		</div>
+		<div class="center">
+			{{ div1 | safe }}
 		</div>
 	</div>  
 </body>
