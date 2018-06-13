@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Experiment with Bokeh</title>
+    <link href="{% static 'bokeh-0.12.4.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'bokeh-widgets-0.12.4.min.css' %}" rel="stylesheet" type="text/css">
+    <script src="{% static 'bokeh-0.12.4.min.js' %}"></script>
+    <script src="{% static 'bokeh-widgets-0.12.4.min.js' %}"></script>
+    {{ script |safe }}
+</head>
+<body>
+
+{{ div |safe }}
+
+</body>
+</html>
+
