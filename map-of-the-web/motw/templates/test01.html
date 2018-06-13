@@ -66,6 +66,16 @@
 		<div class="center">
 			{{ div2 | safe }}
 		</div>
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<div class="ui container">
+			{% if table %}
+				{% render_table table %}
+			{% endif %}
+		</div>
 	</div>  
 </body>
 </html>

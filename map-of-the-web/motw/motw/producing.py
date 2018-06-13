@@ -122,7 +122,7 @@ def processing(str):
 	timestamp_list = use[0]
 	#print(timestamp_list[1])
 	picture2 = test_use_draw(timestamp_list, duplist, 1280, 480)
-	return [picture1, picture2]
+	return [picture1, picture2, snapshot_list]
 
 def Count(str):
 	snapshot_list = download(str)
