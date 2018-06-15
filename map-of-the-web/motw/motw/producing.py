@@ -5,11 +5,10 @@ from motw.snapshot import Snapshot
 import requests as req
 from datetime import datetime
 import pandas as pd
+from util import *
 
-def timestamp2date(x):
-	return x[0:4]+"-"+x[4:6]+"-01"
-
-def Frequency(snapshot_list):
+# This function aims to calculate the number of cdx data of domain name monthly
+def frequency_fun(snapshot_list):
 	string = snapshot_list[0]['timestamp']
 	time = timestamp2date(string)
 	timestamp_list = []
@@ -30,6 +29,8 @@ def Frequency(snapshot_list):
 	frequency_list.append(number)
 	return [timestamp_list, frequency_list]
 
+# This function aims to test the usefulness of webpages of the domain name
+# When the digest of webpage has shown before, it means that there is no change on this webpage.
 def test_use(snapshot_list):
 	digest_use = dict()
 	digest_list = []
@@ -50,6 +51,7 @@ def test_use(snapshot_list):
 		usefulnes_list.append(snapshot_list[i]['usefulness'])
 	return [timestamp_list, usefulnes_list]
 
+# Show the result of frequenct via the figure of broken line
 def draw_broken_line(data, dw, dh):
 	tools = "pan,box_zoom,reset,save"
 	#path = r"bokehTest.html"
@@ -61,6 +63,7 @@ def draw_broken_line(data, dw, dh):
 	s1.text(x, y, text=y, text_baseline="middle", text_align="center")
 	return s1
 
+# Show the result of test_use via the figure, in red lines and blue lines
 def test_use_draw(data, duplist, dw, dh):
 	one = []
 	for i in range(len(data)):
@@ -72,12 +75,7 @@ def test_use_draw(data, duplist, dw, dh):
 	s1.vbar(x=xd, width=3, bottom=0, top=duplist, color="navy")
 	return s1
 
-'''def huadiandian(data, dw, dh):
-	one = []
-	for i in range(len(data)):
-		one.append(1)
-	s1 = figure(plot_width=dw, plot_height=dh)'''
-
+# Store the CDX data 
 def download(str):
 	res = req.get("http://web.archive.org/cdx/search/cdx?url="+str)
 	snapshots = res.text.split('\n')
@@ -89,6 +87,7 @@ def download(str):
 		snapshot_list.append(snap)
 	return snapshot_list
 
+# This function aims to duplicate data for creating table
 def duplicatelist(snapshot_list):
 	digest_use = dict()
 	digest_list = []
@@ -113,10 +112,11 @@ def duplicatelist(snapshot_list):
 	#print(dl)
 	return dl
 
+# Execute functions 
 def processing(str):
 	snapshot_list = download(str)
 	duplist = duplicatelist(snapshot_list)
-	data = Frequency(snapshot_list)
+	data = frequency_fun(snapshot_list)
 	picture1 = draw_broken_line(data, 1280, 480)
 	use = test_use(snapshot_list)
 	timestamp_list = use[0]
@@ -124,6 +124,7 @@ def processing(str):
 	picture2 = test_use_draw(timestamp_list, duplist, 1280, 480)
 	return [picture1, picture2, snapshot_list]
 
+# Caculate the total number of webpages of the domain name
 def Count(str):
 	snapshot_list = download(str)
 	total_number = len(snapshot_list)
