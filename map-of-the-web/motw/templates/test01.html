@@ -9,6 +9,8 @@
 		body, div {
 			padding: 0;
 			margin: 0;
+			margin-top: 0;
+			margin-bottom: 100px;
 		}
 		#container {
 			width: 1070px;
@@ -24,6 +26,7 @@
 			height: 24px;
 			margin-top: 12px;
 		}
+	   
 	</style>
 	<meta charset="UTF-8">
 	<script src="http://cdn.pydata.org/bokeh/release/bokeh-0.12.14.min.js"></script>
@@ -38,11 +41,10 @@
 	{{ script2 | safe}}
 </head>
 
-
 <body>
+
 	<div id="container">
 		<div class="center">
-			<br />
 			<form action="." class="crawl" method="GET">
 				<input type="text" name="q" value="{{query|escape}}">
 				<button type="submit">
@@ -58,19 +60,9 @@
 		<div class="center">
 			{{ div1 | safe }}
 		</div>
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
 		<div class="center">
 			{{ div2 | safe }}
 		</div>
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
 		<div class="ui container">
 			{% if table %}
 				{% render_table table %}
