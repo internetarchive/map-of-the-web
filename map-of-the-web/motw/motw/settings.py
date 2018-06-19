@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
+import sys
+sys.path.append("./motw")
+from settings_secret import *
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -20,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'l$6!exjhsmmqhtx1q8=v(c^*&0i4$unkr@p%9hewp#@w89)(xo'
+#SECRET_KEY = 'z5(o-phi^l)0ueb3^5%vncad=c5(fdpkavo66i=+8^z=hjbuhn'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
