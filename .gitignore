@@ -103,4 +103,4 @@ venv.bak/
 
 # mypy
 .mypy_cache/
-/Users/zhengyuecheng/Desktop/personal/github/map-of-the-web/map-of-the-web/motw/motw/settings_secret.py
+./map-of-the-web/motw/motw/settings_secret.py
