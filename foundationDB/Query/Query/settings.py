@@ -26,7 +26,7 @@ SECRET_KEY = 'ia&ib=0%e2e!)!^+!_n=)-am9_xe_=0s@vjni9s6bt^exn^xv6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['18.191.230.139', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['researcher4.fnf.archive.org', 'localhost', '127.0.0.1']
 
 
 # Application definition
