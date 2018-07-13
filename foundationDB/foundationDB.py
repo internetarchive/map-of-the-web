@@ -25,38 +25,28 @@ def add_url(tr, url, date):
     #tr[fdb.Subspace((pos, ))[url]] = str.encode(date)
     tr[domain_index.pack((url,))] = str.encode(date)
 
-def store_file_archive(domain, create_date):
-    #print ("hhhh")
-    add_url(db, domain, create_date)
-    #print("hhhhh")
-
-def read_file(filename):
-    #print ("hello")
+@fdb.transactional
+def read_file(tr, filename):
     csvFile = pd.read_csv("/home/zcheng/foundationDB/Build/all/" + filename, usecols = ['domain', 'create_date'])
     print (len(csvFile))
     for i in range(0, len(csvFile)):
-        print (i)
+        #print (i)
         #print(csvFile['domain'][i])
         #print(str(csvFile['create_date'][i]))
-        store_file_archive(csvFile['domain'][i], str(csvFile['create_date'][i]))
-        #print (i)
+        add_url(tr, csvFile['domain'][i], str(csvFile['create_date'][i]))
         #value = str(db[fdb.Subspace(('domain-index', ))[csvFile['domain'][i]]])
         #print (csvFile['domain'][i])
         #print (value)
-    #print ('23333')        
-    return csvFile
 
 def read_head(filename):
-    csvFile = pd.read_csv(filename)
+    csvFile = pd.read_csv("/home/zcheng/foundationDB/Build/all/" + filename, usecols = ['domain', 'create_date'])
     print (csvFile.head())
 
 def multiple_processors(filename_list):
-    #with Pool(1) as p:
-     #   p.map(read_file, filename_list)
-    for i in range(0, len(files)):
+    for i in range(163, len(files)):
         print (i)
         print (files[i])
-        read_file(files[i])
+        read_file(db, files[i])
 
 def multiple(filename_list):
      with Pool(1) as p:
@@ -65,6 +55,7 @@ def multiple(filename_list):
 if __name__ == '__main__':
     #read_file("/home/zcheng/foundationDB/test/ae.csv")
     multiple_processors(files)
+    #multiple(files)
     '''csvFile = pd.read_csv("/home/zcheng/foundationDB/small/" + "aaa.csv", usecols = ['domain', 'create_date'])
     for i in range(0, len(csvFile) - 1):
         store_file_archive(csvFile['domain'][i], str(csvFile['create_date'][i]))
