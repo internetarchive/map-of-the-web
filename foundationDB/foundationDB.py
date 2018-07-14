@@ -26,17 +26,23 @@ def add_url(tr, url, date):
     tr[domain_index.pack((url,))] = str.encode(date)
 
 @fdb.transactional
-def read_file(tr, filename):
-    csvFile = pd.read_csv("/home/zcheng/foundationDB/Build/all/" + filename, usecols = ['domain', 'create_date'])
-    print (len(csvFile))
-    for i in range(0, len(csvFile)):
-        #print (i)
-        #print(csvFile['domain'][i])
-        #print(str(csvFile['create_date'][i]))
+def add_url_batch(tr, bl, br, csvFile):
+    for i in range(bl, br):
         add_url(tr, csvFile['domain'][i], str(csvFile['create_date'][i]))
-        #value = str(db[fdb.Subspace(('domain-index', ))[csvFile['domain'][i]]])
-        #print (csvFile['domain'][i])
-        #print (value)
+
+#fdb.transactional
+def read_file(filename):
+    csvFile = pd.read_csv("/home/zcheng/foundationDB/Build/all/" + filename, usecols = ['domain', 'create_date'])
+    LIM = len(csvFile)
+    #for i in range(0, len(csvFile)):
+    #    print (i)
+    #    add_url(tr, csvFile['domain'][i], str(csvFile['create_date'][i]))
+    cnt=0
+    while(cnt<LIM):
+        cr=min(cnt+20000, LIM)
+        print(cnt,cr)
+        add_url_batch(db, cnt, cr, csvFile)
+        cnt=cr 
 
 def read_head(filename):
     csvFile = pd.read_csv("/home/zcheng/foundationDB/Build/all/" + filename, usecols = ['domain', 'create_date'])
@@ -46,7 +52,7 @@ def multiple_processors(filename_list):
     for i in range(163, len(files)):
         print (i)
         print (files[i])
-        read_file(db, files[i])
+        read_file(files[i])
 
 def multiple(filename_list):
      with Pool(1) as p:
