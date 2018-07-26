@@ -2,6 +2,11 @@ from nltk.stem import WordNetLemmatizer
 from nltk.corpus import words
 import re
 from gensim import corpora, models, similarities
+import csv
+import pandas as pd
+import os
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.decomposition import LatentDirichletAllocation
 
 wordlist = set(words.words())
 wordnet_lemmatizer = WordNetLemmatizer()
@@ -19,15 +24,39 @@ def max_match(text):
 			pos2 = pos2 - 1
 	return result[0:-1]
 
-string = "universit de kinshasa demokratische republik kongo"
-#string = re.sub(r'\\u+', ' ', string)
-words = string.split(" ")
+path = "/Users/zhengyuecheng/Desktop/domains"
+new_path = "/Users/zhengyuecheng/Desktop/wordsbag"
+files = os.listdir(path)
+data = os.listdir(new_path)
+#print (files[0][:-4])
 
-tokens = [max_match(word) for word in words]
+def extract_words(path, file_name):
+	tokens = []
+	csvFile = pd.read_csv(path + "/" + file_name, usecols = ['word', 'number'])
+	Lenth = len(csvFile['word'])
+	txt_file = open(new_path + "/" + file_name[:-4] + ".txt", 'w')
+	for i in range (0, Lenth):
+		string = csvFile['word'][i]
+		#print (type(string))
+		string = re.sub("[^A-Za-z ]", ' ', str(string))
+		words = string.split(" ")
+		while '' in words:
+			words.remove('')
+		#token = [max_match(word) for word in words]
+		token = [word for word in words]
+		tokens = tokens + token
+		#txt_file.write(str(tokens))
+		#print (tokens)
+	#print (tokens)
+	for tok in tokens:
+		txt_file.write(tok + "\n")
+	txt_file.close()
 
-print (tokens)
+'''for i in range (0, len(files)):
+	print (i)
+	extract_words(path, files[i])'''
 
-documents = ["universit de kinshasa demokratische republik kongo","oficjalna strona","Shipment of gold arrived in a truck"]
+'''documents = ["universit de kinshasa demokratische republik kongo","oficjalna strona","Shipment of gold arrived in a truck"]
 
 texts = [[word for word in document.lower().split()] for document in documents]
 print (texts)
@@ -44,4 +73,35 @@ for doc in corpus_tfidf:
 	print (doc)
 print ("    yyyyy     ")
 print (tfidf.dfs)
-print (tfidf.idfs)
+print (tfidf.idfs)'''
+#print (data[0])
+
+def result_cluster(docres, index):
+	return docres[index].tolist().index(max(docres[index])) + 1
+
+
+print (len(data))
+L = len(data)
+corpus_list = []
+for i in range(0, L):
+	with open(new_path + "/" + data[i]) as f:
+		corpus_name = "corpus" + str(i)
+		#print (corpus_name)
+		corpus_name = f.read()
+		corpus_list.append(corpus_name)
+
+#print (corpus_list[0])
+cntVector = CountVectorizer()
+cntTf = cntVector.fit_transform(corpus_list)
+#print (cntTf)
+lda = LatentDirichletAllocation(n_topics=10, learning_offset=50., random_state=0)
+docres = lda.fit_transform(cntTf)
+
+for i in range(0, L):
+	cluster = result_cluster(docres, i)
+	print (cluster)
+
+#print (docres[0])
+#print (docres[0].tolist().index(max(docres[0])) + 1)
+
+print ("finished.")
