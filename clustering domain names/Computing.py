@@ -80,7 +80,7 @@ def result_cluster(docres, index):
 	return docres[index].tolist().index(max(docres[index])) + 1
 
 
-print (len(data))
+#print (len(data))
 L = len(data)
 corpus_list = []
 for i in range(0, L):
@@ -97,9 +97,34 @@ cntTf = cntVector.fit_transform(corpus_list)
 lda = LatentDirichletAllocation(n_topics=10, learning_offset=50., random_state=0)
 docres = lda.fit_transform(cntTf)
 
+storage = [[] for i in range(1, 11)]
+dictionary = dict()
 for i in range(0, L):
-	cluster = result_cluster(docres, i)
-	print (cluster)
+    cluster = result_cluster(docres, i)
+    #print (cluster)
+    for j in range(1, 11):
+        if cluster == j:
+        	#print (data[i][:-4])
+        	dictionary[data[i][:-4]] = j
+        	storage[j].append(data[i][:-4])
+        	
+#print (storage[1])
+#print (dictionary["accuweather.com"])
+
+def similar_domains(domain_name):
+	cluster_num = dictionary[domain_name]
+	return storage[cluster_num]
+
+
+string = "accuweather.com"
+def output(string):
+	out = []
+	for i in range(0, len(similar_domains(string))):
+		if similar_domains(string)[i] != string:
+			out.append(similar_domains(string)[i])
+	return out
+
+print(output(string))
 
 #print (docres[0])
 #print (docres[0].tolist().index(max(docres[0])) + 1)
