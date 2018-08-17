@@ -1,0 +1,5 @@
+word,number
+http s thebrighttag com,2
+http s thebrighttag com 443,1
+s thebrighttag com,1
+s thebrighttag com 443,1

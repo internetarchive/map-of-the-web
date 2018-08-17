@@ -1,0 +1,4 @@
+word,number
+http rp gwallet com,2
+rp gwallet com 443,1
+rp gwallet com,1

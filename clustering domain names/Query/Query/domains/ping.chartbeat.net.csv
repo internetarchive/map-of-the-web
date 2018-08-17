@@ -1,0 +1,8 @@
+word,number
+http ping chartbeat net,2
+ping chartbeat net,2
+visit website,1
+n41,1
+ping chartbeat net 443,1
+http ping chartbeat net 443,1
+read article,1

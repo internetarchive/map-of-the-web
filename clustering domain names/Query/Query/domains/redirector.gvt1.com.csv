@@ -1,0 +1,5 @@
+word,number
+http redirector gvt1 com,1
+redirector gvt1 com,1
+redirector gvt1 com 443,1
+https redirector gvt1 com,1

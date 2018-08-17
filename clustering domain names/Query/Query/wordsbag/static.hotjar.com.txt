@@ -1,0 +1,7 @@
+http
+static
+hotjar
+com
+static
+hotjar
+com

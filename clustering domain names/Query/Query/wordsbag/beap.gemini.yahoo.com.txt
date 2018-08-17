@@ -1,0 +1,14 @@
+http
+beap
+gemini
+yahoo
+com
+beap
+gemini
+yahoo
+com
+https
+beap
+gemini
+yahoo
+com

@@ -1,0 +1,6 @@
+word,number
+http p typekit net,2
+http p typekit net 443,1
+p typekit net,1
+https p typekit net 443,1
+p typekit net 443,1

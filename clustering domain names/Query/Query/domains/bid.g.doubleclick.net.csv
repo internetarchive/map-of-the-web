@@ -1,0 +1,5 @@
+word,number
+http bid g doubleclick net,2
+bid g doubleclick net 443,1
+http bid g doubleclick net 443,1
+bid g doubleclick net,1

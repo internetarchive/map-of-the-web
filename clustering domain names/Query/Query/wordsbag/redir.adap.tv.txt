@@ -1,0 +1,12 @@
+http
+redir
+adap
+tv
+redir
+adap
+tv
+redir
+adap
+tv
+view
+domain

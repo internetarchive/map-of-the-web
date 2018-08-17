@@ -1,0 +1,6 @@
+word,number
+http match adsrvr org,2
+match adsrvr org 443,1
+home,1
+http match adsrvr org 443,1
+match adsrvr org,1

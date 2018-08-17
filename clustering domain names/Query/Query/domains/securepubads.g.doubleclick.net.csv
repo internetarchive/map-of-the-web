@@ -1,0 +1,6 @@
+word,number
+https securepubads g doubleclick net,2
+securepubads g doubleclick net 443,1
+http securepubads g doubleclick net 443,1
+securepubads g doubleclick net,1
+http securepubads g doubleclick net,1

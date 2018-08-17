@@ -1,0 +1,5 @@
+word,number
+http dsum sec casalemedia com 443,1
+dsum sec casalemedia com,1
+dsum sec casalemedia com 443,1
+http dsum sec casalemedia com,1

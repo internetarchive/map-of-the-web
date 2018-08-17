@@ -1,0 +1,11 @@
+sstats
+adobe
+com
+https
+sstats
+adobe
+com
+http
+sstats
+adobe
+com

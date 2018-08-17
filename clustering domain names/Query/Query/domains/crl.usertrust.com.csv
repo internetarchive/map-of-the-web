@@ -1,0 +1,5 @@
+word,number
+http crl usertrust com,2
+https crl usertrust com,2
+https crl usertrust com 443,1
+crl usertrust com,1

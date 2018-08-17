@@ -1,0 +1,6 @@
+word,number
+http r nexac com,2
+r nexac com,1
+r nexac com 443,1
+http www r nexac com,1
+http r nexac com 443,1

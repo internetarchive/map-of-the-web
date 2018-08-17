@@ -1,0 +1,5 @@
+word,number
+ad 360yield com,2
+http ad 360yield com,2
+http ad 360yield com 443,1
+ad 360yield com 443,1

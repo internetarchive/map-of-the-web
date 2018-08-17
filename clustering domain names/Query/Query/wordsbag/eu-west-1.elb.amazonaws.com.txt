@@ -1,0 +1,6 @@
+http
+eu
+west
+elb
+amazonaws
+com

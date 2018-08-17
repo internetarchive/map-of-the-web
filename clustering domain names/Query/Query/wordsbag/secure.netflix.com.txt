@@ -1,0 +1,15 @@
+https
+secure
+netflix
+com
+secure
+netflix
+com
+http
+secure
+netflix
+com
+http
+secure
+netflix
+com

@@ -1,0 +1,5 @@
+word,number
+http m addthisedge com,2
+http m addthisedge com 443,1
+m addthisedge com 443,1
+m addthisedge com,1

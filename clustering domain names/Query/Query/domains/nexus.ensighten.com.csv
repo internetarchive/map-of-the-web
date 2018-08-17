@@ -1,0 +1,6 @@
+word,number
+nexus ensighten com,2
+http nexus ensighten com,2
+http nexus ensighten com 443,1
+nexus ensighten com 443,1
+view domain,1

@@ -1,0 +1,5 @@
+word,number
+http r skimresources com,2
+http r skimresources com 443,1
+r skimresources com 443,1
+r skimresources com,1

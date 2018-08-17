@@ -1,0 +1,4 @@
+http
+detectportal
+firefox
+com

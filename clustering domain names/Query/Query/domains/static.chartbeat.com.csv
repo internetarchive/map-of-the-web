@@ -1,0 +1,8 @@
+word,number
+http static chartbeat com,2
+static chartbeat com,1
+view domain,1
+http static chartbeat com 443,1
+static chartbeat com 443,1
+address,1
+view the link as it exists on the live site,1

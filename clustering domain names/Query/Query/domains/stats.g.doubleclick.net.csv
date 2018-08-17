@@ -1,0 +1,10 @@
+word,number
+stats g doubleclick net,2
+http stats g doubleclick net,2
+https stats g doubleclick net,2
+http stats g doubleclick net 443,2
+www stats g doubleclick net,1
+http www veinteractive com\ufeff,1
+http www facebook com,1
+stats g doubleclick net 443,1
+1595,1

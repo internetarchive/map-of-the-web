@@ -1,0 +1,3 @@
+word,number
+http ocsp int x3 letsencrypt org,1
+ocsp int x3 letsencrypt org,1

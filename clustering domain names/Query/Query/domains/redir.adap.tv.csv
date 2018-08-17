@@ -1,0 +1,5 @@
+word,number
+http redir adap tv,1
+redir adap tv,1
+redir adap tv 443,1
+view domain,1

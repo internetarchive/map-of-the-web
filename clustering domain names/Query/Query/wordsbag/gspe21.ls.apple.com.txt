@@ -1,0 +1,4 @@
+gspe
+ls
+apple
+com

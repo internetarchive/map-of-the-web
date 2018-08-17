@@ -1,0 +1,16 @@
+word,number
+http fls doubleclick net,2
+https fls doubleclick net,2
+https fls doubleclick net 443,2
+fls doubleclick net,2
+error 404 not found 1,1
+view domain,1
+visit the website,1
+view site,1
+http fls doubleclick net 443,1
+fls doubleclick net 443,1
+google inc,1
+go to this domain,1
+address,1
+visit fls doubleclick net,1
+www fls doubleclick net,1

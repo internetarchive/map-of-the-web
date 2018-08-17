@@ -1,0 +1,6 @@
+word,number
+http api mixpanel com,2
+https api mixpanel com,1
+http api mixpanel com 443,1
+api mixpanel com,1
+api mixpanel com 443,1

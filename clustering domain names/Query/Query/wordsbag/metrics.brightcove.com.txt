@@ -1,0 +1,10 @@
+http
+metrics
+brightcove
+com
+metrics
+brightcove
+com
+metrics
+brightcove
+com

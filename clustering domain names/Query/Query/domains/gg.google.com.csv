@@ -1,0 +1,10 @@
+word,number
+http gg google com,2
+https gg google com,1
+gg google com,1
+gg google com 443,1
+google,1
+http gg google com 443,1
+\u00e3\u00ee\u00ea\u00b8\u00e3\u00f5\u00be,1
+visit,1
+https gg google com 443,1

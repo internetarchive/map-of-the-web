@@ -1,0 +1,4 @@
+word,number
+sslwidget criteo com 443,1
+sslwidget criteo com,1
+http sslwidget criteo com 443,1

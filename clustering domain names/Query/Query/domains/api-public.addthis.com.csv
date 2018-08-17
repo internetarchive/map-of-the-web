@@ -1,0 +1,5 @@
+word,number
+http api public addthis com,2
+api public addthis com 443,1
+http api public addthis com 443,1
+api public addthis com,1

@@ -1,0 +1,6 @@
+word,number
+http t mookie1 com,2
+t mookie1 com 443,1
+https t mookie1 com,1
+http t mookie1 com 443,1
+t mookie1 com,1

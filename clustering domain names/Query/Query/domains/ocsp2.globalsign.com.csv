@@ -1,0 +1,4 @@
+word,number
+http ocsp2 globalsign com,2
+ocsp2 globalsign com,1
+http ocsp2 globalsign com 80,1

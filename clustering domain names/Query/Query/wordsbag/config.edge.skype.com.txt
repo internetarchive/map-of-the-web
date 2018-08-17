@@ -1,0 +1,4 @@
+config
+edge
+skype
+com

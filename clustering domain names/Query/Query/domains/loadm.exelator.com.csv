@@ -1,0 +1,7 @@
+word,number
+http loadm exelator com,2
+loadm exelator com,1
+https loadm exelator com 443,1
+http loadm exelator com 443,1
+loadm exelator com 443,1
+ttp loadm exelator com,1

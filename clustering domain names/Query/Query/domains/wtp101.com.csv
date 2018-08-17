@@ -1,0 +1,10 @@
+word,number
+www wtp101 com,2
+http www wtp101 com,2
+http www wtp101 com 443,1
+>http wtp101 com,1
+visit website,1
+view site,1
+www wtp101 com 443,1
+http wtp101 com,1
+wtp101 com,1

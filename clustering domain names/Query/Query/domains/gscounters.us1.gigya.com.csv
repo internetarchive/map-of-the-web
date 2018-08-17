@@ -1,0 +1,6 @@
+word,number
+http gscounters us1 gigya com,2
+http gscounters us1 gigya com 443,1
+gscounters us1 gigya com,1
+gscounters us1 gigya com 443,1
+gs counters gigya,1

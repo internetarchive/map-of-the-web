@@ -1,0 +1,8 @@
+word,number
+bcp crwdcntrl net,2
+http bcp crwdcntrl net,2
+https bcp crwdcntrl net 443,1
+https bcp crwdcntrl net,1
+http bcp crwdcntrl net 443,1
+bcp crwdcntrl net 443,1
+1750,1

@@ -1,0 +1,4 @@
+word,number
+script crazyegg com 443,1
+script crazyegg com,1
+http script crazyegg com,1

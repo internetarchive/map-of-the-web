@@ -1,0 +1,7 @@
+word,number
+http auth gfx ms 443,1
+http auth gfx ms,1
+auth gfx ms,1
+https auth gfx ms 443,1
+auth gfx ms 443,1
+https auth gfx ms,1

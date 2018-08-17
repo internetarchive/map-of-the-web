@@ -1,0 +1,4 @@
+word,number
+http c1 adform net,2
+c1 adform net 443,1
+c1 adform net,1

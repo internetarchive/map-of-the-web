@@ -1,0 +1,5 @@
+word,number
+doubleverify inc,1
+tps30 doubleverify com,1
+tps30 doubleverify com 443,1
+http tps30 doubleverify com,1

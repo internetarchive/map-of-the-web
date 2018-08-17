@@ -1,0 +1,5 @@
+word,number
+http px owneriq net,2
+px owneriq net 443,1
+px owneriq net,1
+view domain,1

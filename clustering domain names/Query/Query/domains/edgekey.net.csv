@@ -1,0 +1,10 @@
+word,number
+http edgekey net,2
+redirect to edgekey net,1
+http www edgekey net,1
+visit website,1
+https edgekey net,1
+99180 edgekey net,1
+close,1
+edgekey net,1
+www edgekey net,1

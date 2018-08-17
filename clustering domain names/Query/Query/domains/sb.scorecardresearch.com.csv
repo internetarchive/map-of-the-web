@@ -1,0 +1,9 @@
+word,number
+http sb scorecardresearch com,2
+www sb scorecardresearch com,1
+http sb scorecardresearch com 443,1
+sb scorecardresearch com,1
+https sb scorecardresearch com,1
+sb scorecardresearch com 443,1
+https sb scorecardresearch com 443,1
+score card research,1

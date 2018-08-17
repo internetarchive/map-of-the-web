@@ -1,0 +1,6 @@
+word,number
+http static criteo net,2
+http static criteo net 443,1
+static criteo net,1
+view domain,1
+static criteo net 443,1

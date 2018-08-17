@@ -1,0 +1,13 @@
+http
+api
+brightcove
+com
+api
+brightcove
+com
+brightcove
+video
+cloud
+media
+api
+reference

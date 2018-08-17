@@ -1,0 +1,5 @@
+word,number
+http su addthis com,2
+su addthis com 443,1
+su addthis com,1
+http su addthis com 443,1

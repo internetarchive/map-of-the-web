@@ -1,0 +1,8 @@
+service
+weather
+microsoft
+com
+service
+weather
+microsoft
+com

@@ -1,0 +1,5 @@
+word,number
+http dpm demdex net,2
+dpm demdex net 443,1
+dpm demdex net,1
+http dpm demdex net 443,1

@@ -1,0 +1,5 @@
+word,number
+http x bidswitch net,2
+x bidswitch net,1
+x bidswitch net 443,1
+http x bidswitch net 443,1

@@ -1,0 +1,5 @@
+word,number
+api global netflix com,1
+http api global netflix com 443,1
+http api global netflix com,1
+api global netflix com 443,1

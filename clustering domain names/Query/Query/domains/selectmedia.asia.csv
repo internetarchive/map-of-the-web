@@ -1,0 +1,11 @@
+word,number
+http selectmedia asia,2
+http www selectmedia asia,2
+przekieruj do selectmedia asia,1
+dave fisher,1
+visit website,1
+>http selectmedia asia,1
+www selectmedia asia,1
+selectmedia asia,1
+redirect to selectmedia asia,1
+image source,1

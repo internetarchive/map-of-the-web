@@ -1,0 +1,5 @@
+word,number
+http load s3 amazonaws com,2
+load s3 amazonaws com 443,1
+https load s3 amazonaws com 443,1
+load s3 amazonaws com,1

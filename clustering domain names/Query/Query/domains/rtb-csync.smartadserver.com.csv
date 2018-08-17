@@ -1,0 +1,5 @@
+word,number
+http rtb csync smartadserver com,2
+rtb csync smartadserver com,1
+rtb csync smartadserver com 443,1
+http rtb csync smartadserver com 443,1

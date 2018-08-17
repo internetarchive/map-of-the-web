@@ -1,0 +1,5 @@
+word,number
+http 0 client channel google com 443,2
+https 0 client channel google com,1
+0 client channel google com 443,1
+0 client channel google com,1

@@ -1,0 +1,8 @@
+word,number
+https tpc googlesyndication com,2
+http tpc googlesyndication com,2
+http tpc googlesyndication com 443,1
+visit tpc googlesyndication com,1
+tpc googlesyndication com 443,1
+https tpc googlesyndication com 443,1
+tpc googlesyndication com,1

@@ -1,0 +1,4 @@
+word,number
+cas sv us criteo com,1
+http cas sv us criteo com 443,1
+http cas sv us criteo com,1

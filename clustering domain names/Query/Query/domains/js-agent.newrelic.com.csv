@@ -1,0 +1,6 @@
+word,number
+https js agent newrelic com,2
+http js agent newrelic com,1
+js agent newrelic com 443,1
+js agent newrelic com,1
+http js agent newrelic com 443,1

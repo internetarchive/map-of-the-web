@@ -1,0 +1,14 @@
+http
+static
+adsafeprotected
+com
+static
+adsafeprotected
+com
+static
+adsafeprotected
+com
+https
+static
+adsafeprotected
+com

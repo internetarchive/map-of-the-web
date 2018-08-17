@@ -1,0 +1,5 @@
+word,number
+http cti w55c net,2
+cti w55c net 443,1
+netblk 03 eu 93 184 220 0 22,1
+cti w55c net,1

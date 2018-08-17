@@ -1,0 +1,5 @@
+word,number
+setup icloud com,1
+http setup icloud com,1
+https setup icloud com,1
+setup icloud com 443,1

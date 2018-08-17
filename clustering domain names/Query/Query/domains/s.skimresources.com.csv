@@ -1,0 +1,9 @@
+word,number
+http s skimresources com,2
+s skimresources com 443,1
+view domain,1
+http s skimresources com 443,1
+redirection,1
+ooops something went wrong,1
+la fauve,1
+s skimresources com,1

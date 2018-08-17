@@ -1,0 +1,10 @@
+word,number
+s w org,2
+http s w org,1
+s w org 443,1
+http www s w org,1
+https s w org,1
+original version,1
+wordpress,1
+view the link as it exists on the live site,1
+original site,1
